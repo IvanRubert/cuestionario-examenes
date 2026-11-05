@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionarios de examen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="top">
+  <h1 class="brand"><span class="brand-mark">✎</span><span data-i18n="appTitle"></span></h1>
+  <div class="tools">
+    <select id="sel-lang" data-i18n-title="language"></select>
+    <button id="btn-theme" class="icon-btn" data-i18n-title="theme" type="button"></button>
+  </div>
+</header>
+
+<main>
+  <!-- 1. CONFIGURACIÓN -->
+  <section id="screen-setup" class="card">
+    <p class="lead" data-i18n="appSubtitle"></p>
+    <div class="field"><label for="sel-subject" data-i18n="subject"></label><select id="sel-subject"></select></div>
+    <div class="field"><label for="sel-unit" data-i18n="unit"></label><select id="sel-unit"></select></div>
+    <div class="field"><span class="label" data-i18n="topics"></span><div id="topic-list" class="checks"></div></div>
+    <div class="field">
+      <span class="label" data-i18n="options"></span>
+      <label class="switch"><input type="checkbox" id="sw-shuffle"><span class="track"></span>
+        <span><b data-i18n="shuffle"></b><small data-i18n="shuffleHint"></small></span></label>
+      <label for="sel-type" class="sublabel" data-i18n="qtype"></label>
+      <select id="sel-type">
+        <option value="all" data-i18n="typeAll"></option>
+        <option value="simple" data-i18n="typeSimple"></option>
+        <option value="multiple" data-i18n="typeMultiple"></option>
+      </select>
+    </div>
+    <div class="actions between">
+      <span id="available" class="muted"></span>
+      <button id="btn-start" class="btn primary" type="button" data-i18n="start"></button>
+    </div>
+  </section>
+
+  <!-- 2. CUESTIONARIO -->
+  <section id="screen-quiz" hidden>
+    <div class="quiz-top"><span id="q-count"></span><button id="btn-quit" class="btn ghost" type="button" data-i18n="quit"></button></div>
+    <div class="progress"><i id="q-bar"></i></div>
+    <article class="card">
+      <div class="chips"><span id="q-topic" class="chip"></span><span id="q-type" class="chip"></span></div>
+      <h2 id="q-text"></h2>
+      <p id="q-hint" class="muted"></p>
+      <div id="q-options" class="options"></div>
+      <div id="q-feedback" class="feedback" role="status" hidden></div>
+      <div class="actions">
+        <button id="btn-submit" class="btn primary" type="button" data-i18n="submit"></button>
+        <button id="btn-next" class="btn primary" type="button" hidden></button>
+      </div>
+    </article>
+  </section>
+
+  <!-- 3. RESULTADOS -->
+  <section id="screen-results" hidden>
+    <article class="card hero">
+      <div id="res-ring" class="ring"><div><strong id="res-pct"></strong><span id="res-score"></span></div></div>
+      <div><h2 data-i18n="results"></h2><p id="res-msg" class="lead"></p></div>
+    </article>
+    <div id="res-cards" class="stats"></div>
+    <article class="card"><h3 data-i18n="byType"></h3><div id="res-types"></div></article>
+    <article class="card"><h3 data-i18n="byTopic"></h3><div id="res-topics"></div></article>
+    <article class="card"><h3 data-i18n="review"></h3><div id="res-review"></div></article>
+    <div class="actions">
+      <button id="btn-retry" class="btn" type="button" data-i18n="retry"></button>
+      <button id="btn-new" class="btn primary" type="button" data-i18n="newQuiz"></button>
+    </div>
+  </section>
+</main>
+
+<!-- Núcleo -->
+<script src="js/store.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
+<!-- Banco de preguntas: añade aquí un <script> por cada asignatura -->
+<script src="js/data/bank.js"></script>
+<script src="js/data/introduccion_nube.js"></script>
+<script src="js/data/daw.js"></script>
+<!-- Lógica -->
+<script src="js/quiz.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
