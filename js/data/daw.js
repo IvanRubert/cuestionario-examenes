@@ -244,11 +244,6 @@
               QuizBank.textTranslation(`Enlaza el puerto 80 del anfitrión con el 8080 del contenedor`, `Enllaça el port 80 de l'amfitrió amb el 8080 del contenidor`),
               QuizBank.textTranslation(`Limita el contenedor a 8080 procesos`, `Limita el contenidor a 8080 processos`),
               QuizBank.textTranslation(`Expone el puerto 8080 solo a otros contenedores`, `Exposa el port 8080 només a altres contenidors`)], [0]),
-            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué afirmaciones sobre el contenedor wordpress-db (MariaDB) son correctas?`, `Quines afirmacions sobre el contenidor wordpress-db (MariaDB) són correctes?`), [
-              QuizBank.textTranslation(`Se ejecuta en segundo plano (-d)`, `S'executa en segon pla (-d)`),
-              QuizBank.textTranslation(`Su puerto 3306 se expone solo a otros contenedores, no al anfitrión`, `El seu port 3306 s'exposa només a altres contenidors, no a l'amfitrió`),
-              QuizBank.textTranslation(`Se configura mediante variables de entorno (-e)`, `Es configura mitjançant variables d'entorn (-e)`),
-              QuizBank.textTranslation(`Guarda los datos dentro del propio contenedor`, `Guarda les dades dins del propi contenidor`)], [0, 1, 2]),
             QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué parámetro vincula un contenedor con otro usando un alias?`, `Quin paràmetre vincula un contenidor amb un altre usant un àlies?`),
               [`--link`, `--mount`, `--restart`, `--name`], [0],
               QuizBank.textTranslation(`Está desaconsejado desde Docker 1.13 en favor de las redes.`, `Està desaconsellat des de Docker 1.13 a favor de les xarxes.`))
@@ -256,7 +251,7 @@
 
           { id: 't2_7', name: QuizBank.textTranslation(`7 Docker Compose`, `7 Docker Compose`), questions: [
             QuizBank.createQuestion(QuizBank.textTranslation(`¿En qué fichero se define una aplicación multicontenedor con Docker Compose?`, `En quin fitxer es defineix una aplicació multicontenidor amb Docker Compose?`),
-              [`docker-compose.yaml`, `Dockerfile`, `compose.json`, `docker.conf`], [0]),
+              [`docker-compose.yml`, `Dockerfile`, `compose.json`, `docker.conf`], [0]),
             QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué secciones tiene un fichero de Compose?`, `Quines seccions té un fitxer de Compose?`),
               [`services`, `volumes`, `networks`, `images`], [0, 1, 2]),
             QuizBank.createQuestion(QuizBank.textTranslation(`Según la actualización de noviembre de 2025, ¿cuál es la forma actual de arrancar los servicios en segundo plano?`, `Segons l'actualització de novembre de 2025, quina és la forma actual d'arrancar els serveis en segon pla?`),
@@ -336,7 +331,7 @@
             QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué métodos recoge el estándar HTTP/1.0?`, `Quins mètodes arreplega l'estàndard HTTP/1.0?`),
               [`GET`, `HEAD`, `POST`, `PUT`, `DELETE`], [0, 1, 2], QuizBank.textTranslation(`PUT, DELETE, OPTIONS, TRACE y CONNECT llegan con HTTP/1.1.`, `PUT, DELETE, OPTIONS, TRACE i CONNECT arriben amb HTTP/1.1.`)),
             QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué grupo de códigos de estado indica un error generado en el servidor?`, `Quin grup de codis d'estat indica un error generat al servidor?`), [
-              QuizBank.textTranslation(`5xx`, `5xx`), QuizBank.textTranslation(`4xx (error del cliente)`, `4xx (error del client)`), QuizBank.textTranslation(`3xx (redirección)`, `3xx (redirecció)`), QuizBank.textTranslation(`2xx (éxito)`, `2xx (èxit)`)], [0]),
+              QuizBank.textTranslation(`5xx`, `5xx`), QuizBank.textTranslation(`4xx`, `4xx`), QuizBank.textTranslation(`3xx`, `3xx`), QuizBank.textTranslation(`2xx`, `2xx`)], [0]),
             QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué cabecera de HTTP/1.1 permitió alojar varios dominios en la misma dirección IP?`, `Quina capçalera d'HTTP/1.1 va permetre allotjar diversos dominis en la mateixa adreça IP?`),
               [`Host`, `Accept`, `User-Agent`, `Content-Type`], [0]),
             QuizBank.createQuestion(QuizBank.textTranslation(`¿Sobre qué protocolo de transporte funciona HTTP/3?`, `Sobre quin protocol de transport funciona HTTP/3?`), [
