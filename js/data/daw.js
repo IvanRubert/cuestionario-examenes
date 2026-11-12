@@ -393,6 +393,75 @@
               QuizBank.textTranslation(`Añadir más servidores y repartir la carga`, `Afegir més servidors i repartir la càrrega`),
               QuizBank.textTranslation(`Cambiar la zona horaria del sistema`, `Canviar la zona horària del sistema`),
               QuizBank.textTranslation(`Reducir los recursos del servidor`, `Reducir els recursos del servidor`)], [0])
+          ]},
+
+          { id: 't3_6', name: QuizBank.textTranslation(`3.6 Administración de Apache 2`, `3.6 Administració d'Apache 2`), questions: [
+            QuizBank.createQuestion(QuizBank.textTranslation(`En Debian o Ubuntu, ¿qué afirmación describe correctamente la relación entre sites-available y sites-enabled?`, `En Debian o Ubuntu, quina afirmació descriu correctament la relació entre sites-available i sites-enabled?`), [
+              QuizBank.textTranslation(`sites-available contiene las configuraciones y sites-enabled enlaces a las que están activas`, `sites-available conté les configuracions i sites-enabled enllaços a les que estan actives`),
+              QuizBank.textTranslation(`Apache solo lee los ficheros de sites-available`, `Apache només llig els fitxers de sites-available`),
+              QuizBank.textTranslation(`sites-enabled almacena los registros de acceso`, `sites-enabled emmagatzema els registres d'accés`),
+              QuizBank.textTranslation(`Ambos directorios deben contener copias idénticas`, `Els dos directoris han de contindre còpies idèntiques`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué orden comprueba la sintaxis de la configuración de Apache antes de aplicarla?`, `Quina ordre comprova la sintaxi de la configuració d'Apache abans d'aplicar-la?`),
+              [`apache2ctl configtest`, `apache2ctl --reload`, `a2ensite configtest`, `systemctl check apache2`], [0],
+              QuizBank.textTranslation(`El resultado esperado si no hay errores es Syntax OK.`, `El resultat esperat si no hi ha errors és Syntax OK.`)),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué órdenes se usan para activar un módulo y aplicar el cambio en Apache?`, `Quines ordres s'usen per a activar un mòdul i aplicar el canvi a Apache?`), [
+              QuizBank.textTranslation(`a2enmod y después reiniciar Apache`, `a2enmod i després reiniciar Apache`),
+              QuizBank.textTranslation(`a2ensite y después recargar Apache`, `a2ensite i després recarregar Apache`),
+              QuizBank.textTranslation(`a2dismod y después detener Apache`, `a2dismod i després aturar Apache`),
+              QuizBank.textTranslation(`a2enconf sin reiniciar ni recargar`, `a2enconf sense reiniciar ni recarregar`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Con qué identidad se ejecutan normalmente los procesos de Apache que atienden peticiones en Ubuntu?`, `Amb quina identitat s'executen normalment els processos d'Apache que atenen peticions a Ubuntu?`),
+              [`www-data`, `root`, `apache-admin`, QuizBank.textTranslation(`nobody en todos los casos`, `nobody en tots els casos`)], [0],
+              QuizBank.textTranslation(`Por ello, www-data necesita poder leer los ficheros publicados y atravesar sus directorios.`, `Per això, www-data ha de poder llegir els fitxers publicats i travessar els seus directoris.`)),
+            QuizBank.createQuestion(QuizBank.textTranslation(`En Apache 2.4, ¿qué combinación exige que se cumplan todas las condiciones de acceso?`, `En Apache 2.4, quina combinació exigix que es complisquen totes les condicions d'accés?`),
+              [`<RequireAll>`, `<RequireAny>`, `<RequireNone>`, `<IfModule>`], [0],
+              QuizBank.textTranslation(`<RequireAny> permite el acceso cuando se cumple al menos una condición.`, `<RequireAny> permet l'accés quan es complix almenys una condició.`)),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Dónde conviene guardar el fichero de contraseñas de la autenticación HTTP Basic?`, `On convé guardar el fitxer de contrasenyes de l'autenticació HTTP Basic?`), [
+              QuizBank.textTranslation(`Fuera del DocumentRoot, para que no se pueda descargar desde la web`, `Fora del DocumentRoot, perquè no es puga descarregar des de la web`),
+              QuizBank.textTranslation(`Dentro del directorio público junto a index.html`, `Dins del directori públic al costat d'index.html`),
+              QuizBank.textTranslation(`En sites-enabled`, `A sites-enabled`),
+              QuizBank.textTranslation(`En una URL protegida por el mismo usuario`, `En una URL protegida pel mateix usuari`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué afirmación sobre la autenticación HTTP Basic es correcta?`, `Quina afirmació sobre l'autenticació HTTP Basic és correcta?`), [
+              QuizBank.textTranslation(`Codifica las credenciales en Base64, pero no las cifra; debe usarse sobre HTTPS`, `Codifica les credencials en Base64, però no les xifra; s'ha d'usar sobre HTTPS`),
+              QuizBank.textTranslation(`Cifra siempre las credenciales aunque se use HTTP`, `Xifra sempre les credencials encara que s'use HTTP`),
+              QuizBank.textTranslation(`Solo permite autenticar direcciones IP`, `Només permet autenticar adreces IP`),
+              QuizBank.textTranslation(`Almacena la contraseña en claro en el fichero de usuarios`, `Emmagatzema la contrasenya en clar al fitxer d'usuaris`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué implica configurar AllowOverride None en un bloque <Directory>?`, `Què implica configurar AllowOverride None en un bloc <Directory>?`), [
+              QuizBank.textTranslation(`Apache ignora los ficheros .htaccess de ese directorio`, `Apache ignora els fitxers .htaccess d'eixe directori`),
+              QuizBank.textTranslation(`Todas las directivas se pueden definir en .htaccess`, `Totes les directives es poden definir a .htaccess`),
+              QuizBank.textTranslation(`Apache reinicia el servicio en cada petición`, `Apache reinicia el servici en cada petició`),
+              QuizBank.textTranslation(`Se habilita automáticamente mod_rewrite`, `S'habilita automàticament mod_rewrite`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`En un VirtualHost basado en nombre, ¿cómo decide Apache qué sitio servir?`, `En un VirtualHost basat en nom, com decidix Apache quin lloc web ha de servir?`), [
+              QuizBank.textTranslation(`Compara la cabecera Host con ServerName o ServerAlias`, `Compara la capçalera Host amb ServerName o ServerAlias`),
+              QuizBank.textTranslation(`Elige el sitio cuyo DocumentRoot sea más grande`, `Tria el lloc web amb el DocumentRoot més gran`),
+              QuizBank.textTranslation(`Usa siempre la dirección IP del navegador`, `Usa sempre l'adreça IP del navegador`),
+              QuizBank.textTranslation(`Elige al azar entre los sitios habilitados`, `Tria a l'atzar entre els llocs habilitats`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`Si ningún VirtualHost coincide con la petición, ¿qué sitio sirve Apache para esa IP y puerto?`, `Si cap VirtualHost coincidix amb la petició, quin lloc web servix Apache per a eixa IP i port?`),
+              [QuizBank.textTranslation(`El primer VirtualHost cargado`, `El primer VirtualHost carregat`),
+                QuizBank.textTranslation(`El último habilitado`, `L'últim habilitat`),
+                QuizBank.textTranslation(`El de mayor tráfico`, `El de més trànsit`),
+                QuizBank.textTranslation(`Ninguno: siempre devuelve 404`, `Cap: sempre retorna 404`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué diferencia principal hay entre un certificado autofirmado y uno emitido por una CA de confianza?`, `Quina diferència principal hi ha entre un certificat autofirmat i un emés per una CA de confiança?`), [
+              QuizBank.textTranslation(`El autofirmado puede cifrar, pero el navegador no puede verificar que una entidad de confianza avale la identidad`, `L'autofirmat pot xifrar, però el navegador no pot verificar que una entitat de confiança avale la identitat`),
+              QuizBank.textTranslation(`El autofirmado no cifra el tráfico`, `L'autofirmat no xifra el trànsit`),
+              QuizBank.textTranslation(`El de una CA solo sirve para HTTP sin cifrar`, `El d'una CA només servix per a HTTP sense xifrar`),
+              QuizBank.textTranslation(`No hay ninguna diferencia en la verificación`, `No hi ha cap diferència en la verificació`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿En qué VirtualHost se configura normalmente la redirección de HTTP a HTTPS?`, `En quin VirtualHost es configura normalment la redirecció d'HTTP a HTTPS?`), [
+              QuizBank.textTranslation(`En el de HTTP, en el puerto 80`, `En el d'HTTP, al port 80`),
+              QuizBank.textTranslation(`En el de HTTPS, en el puerto 443`, `En el d'HTTPS, al port 443`),
+              QuizBank.textTranslation(`En ambos VirtualHost`, `En els dos VirtualHost`),
+              QuizBank.textTranslation(`En el fichero de contraseñas`, `Al fitxer de contrasenyes`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`En una aplicación con un front controller, ¿qué hace FallbackResource /index.php?`, `En una aplicació amb un front controller, què fa FallbackResource /index.php?`), [
+              QuizBank.textTranslation(`Envía a index.php las rutas que no corresponden a un fichero existente`, `Envia a index.php les rutes que no corresponen a un fitxer existent`),
+              QuizBank.textTranslation(`Redirige todas las peticiones a otro servidor por HTTPS`, `Redirigix totes les peticions a un altre servidor per HTTPS`),
+              QuizBank.textTranslation(`Impide que Apache ejecute PHP`, `Impedix que Apache execute PHP`),
+              QuizBank.textTranslation(`Crea automáticamente un fichero index.php`, `Crea automàticament un fitxer index.php`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué devuelven normalmente los clientes si la aplicación situada detrás de un proxy inverso está caída?`, `Què reben normalment els clients si l'aplicació situada darrere d'un proxy invers està aturada?`),
+              [`502 Bad Gateway`, `401 Unauthorized`, `301 Moved Permanently`, `304 Not Modified`], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`Tras un error 500 después de modificar un .htaccess, ¿qué conviene revisar primero?`, `Després d'un error 500 en modificar un .htaccess, què convé revisar primer?`), [
+              QuizBank.textTranslation(`La sintaxis y si AllowOverride permite esas directivas; el error.log suele indicar el detalle`, `La sintaxi i si AllowOverride permet eixes directives; error.log sol indicar-ne el detall`),
+              QuizBank.textTranslation(`Si el cliente usa la misma zona horaria que el servidor`, `Si el client usa la mateixa zona horària que el servidor`),
+              QuizBank.textTranslation(`El contenido del fichero hosts del servidor`, `El contingut del fitxer hosts del servidor`),
+              QuizBank.textTranslation(`Si hace falta borrar los certificados TLS`, `Si cal esborrar els certificats TLS`)], [0])
           ]}
         ]
       }
