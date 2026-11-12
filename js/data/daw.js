@@ -361,7 +361,38 @@
               QuizBank.textTranslation(`Solo pueden usarse juntos en Windows`, `Només poden usar-se junts en Windows`)], [0]),
             QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué porcentaje de uso suman aproximadamente Apache y Nginx entre los servidores web?`, `Quin percentatge d'ús sumen aproximadament Apache i Nginx entre els servidors web?`), [
               QuizBank.textTranslation(`Más del 85 %`, `Més del 85 %`), QuizBank.textTranslation(`Alrededor del 40 %`, `Al voltant del 40 %`),
-              QuizBank.textTranslation(`Menos del 10 %`, `Menys del 10 %`), QuizBank.textTranslation(`Exactamente el 100 %`, `Exactament el 100 %`)], [0])
+              QuizBank.textTranslation(`Menos del 10 %`, `Menys del 10 %`), QuizBank.textTranslation(`Exactamente el 100 %`, `Exactament el 100 %`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué servidor suele ser más eficiente para servir contenido estático y actuar como proxy inverso?`, `Quin servidor sol ser més eficient per a servir contingut estàtic i actuar com a proxy invers?`), [
+              QuizBank.textTranslation(`Nginx`, `Nginx`), QuizBank.textTranslation(`Apache`, `Apache`),
+              QuizBank.textTranslation(`MySQL`, `MySQL`), QuizBank.textTranslation(`IIS`, `IIS`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué problema estaba resolviendo Nginx cuando se popularizó como solución web?`, `Quin problema estava resolent Nginx quan es va popularitzar com a solució web?`), [
+              QuizBank.textTranslation(`El problema C10K de atender muchas conexiones simultáneas`, `El problema C10K d'atendre moltes connexions simultànies`),
+              QuizBank.textTranslation(`La gestión de bases de datos relacionales`, `La gestió de bases de dades relacionals`),
+              QuizBank.textTranslation(`La compilación de programas Java`, `La compilació de programes Java`),
+              QuizBank.textTranslation(`La resolución de nombres DNS`, `La resolució de noms DNS`)], [0])
+          ]},
+
+          { id: 't3_5', name: QuizBank.textTranslation(`3.5 Servicios web y balanceo`, `3.5 Serveis web i balanceig`), questions: [
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué función cumple un balanceador de carga en una arquitectura web?`, `Quina funció compleix un balancejador de càrrega en una arquitectura web?`), [
+              QuizBank.textTranslation(`Distribuir la carga entre varios servidores para mejorar disponibilidad y rendimiento`, `Distribuir la càrrega entre diversos servidors per a millorar la disponibilitat i el rendiment`),
+              QuizBank.textTranslation(`Guardar todas las peticiones para luego procesarlas en el cliente`, `Guardar totes les peticions per a després processar-les al client`),
+              QuizBank.textTranslation(`Compilar el código PHP del servidor`, `Compilar el codi PHP del servidor`),
+              QuizBank.textTranslation(`Sustituir completamente al servidor de base de datos`, `Substituir completament el servidor de base de dades`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué es un proxy inverso?`, `Què és un proxy invers?`), [
+              QuizBank.textTranslation(`Un servidor que recibe peticiones del exterior y las reenvía a la infraestructura interna`, `Un servidor que rep peticions de l'exterior i les reenviï a la infraestructura interna`),
+              QuizBank.textTranslation(`Un navegador que oculta la IP del cliente`, `Un navegador que amaga la IP del client`),
+              QuizBank.textTranslation(`Un servidor de correo`, `Un servidor de correu`),
+              QuizBank.textTranslation(`Un sistema de archivos compartido`, `Un sistema de fitxers compartit`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué ventaja aporta la alta disponibilidad en un servicio web?`, `Quina avantatge aporta l'alta disponibilitat en un servei web?`), [
+              QuizBank.textTranslation(`Que el servicio siga funcionando aunque falle uno o varios nodos`, `Que el servei continue funcionant encara que falle un o diversos nodes`),
+              QuizBank.textTranslation(`Que el servicio se ejecute más lento`, `Que el servei s'executi més lent`),
+              QuizBank.textTranslation(`Que el cliente deje de hacer peticiones`, `Que el client deixe de fer peticions`),
+              QuizBank.textTranslation(`Que el servidor deje de aceptar conexiones HTTPS`, `Que el servidor deixe d'acceptar connexions HTTPS`)], [0]),
+            QuizBank.createQuestion(QuizBank.textTranslation(`¿Qué es la escalabilidad vertical?`, `Què és l'escalabilitat vertical?`), [
+              QuizBank.textTranslation(`Aumentar la potencia del hardware de un mismo servidor`, `Augmentar la potència del maquinari d'un mateix servidor`),
+              QuizBank.textTranslation(`Añadir más servidores y repartir la carga`, `Afegir més servidors i repartir la càrrega`),
+              QuizBank.textTranslation(`Cambiar la zona horaria del sistema`, `Canviar la zona horària del sistema`),
+              QuizBank.textTranslation(`Reducir los recursos del servidor`, `Reducir els recursos del servidor`)], [0])
           ]}
         ]
       }
